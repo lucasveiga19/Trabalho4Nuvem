@@ -48,12 +48,24 @@ routes.get('/', (req, res) => {
                 </a></button>
 
                 <br>
-                
-                <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/existe'> 
-                Verificação de Existência
+
+                <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/bhaskara'> 
+                Bhaskara
                 </a></button>
                 
               </form>
+               <h2>Operações com Triângulo<h2>
+
+              <form>
+                <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/existe'> 
+                Verificação de Existência
+                </a></button>
+
+                <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/tipo'> 
+                Verificação de Tipo
+                </a></button>
+              </form>
+
             </body>
         </html> 
       `);
