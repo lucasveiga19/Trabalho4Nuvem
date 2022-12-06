@@ -46,6 +46,13 @@ routes.get('/', (req, res) => {
                 <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/raiz'> 
                 Raiz Quadrada
                 </a></button>
+
+                <br>
+                
+                <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/existe'> 
+                Verificação de Existência
+                </a></button>
+                
               </form>
             </body>
         </html> 

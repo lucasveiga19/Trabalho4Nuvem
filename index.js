@@ -13,6 +13,8 @@ const fibonnaciRouter = require('./rotas2/fibonnaci');
 const mediaRouter = require('./rotas2/media');
 const raizRouter = require('./rotas2/raiz');
 
+const existeRouter = require('./rotas3/existe');
+
 app.use(bodyParser.json());
 app.use(express.urlencoded());
 
@@ -40,6 +42,9 @@ app.post('/media', mediaRouter);
 
 app.get('/raiz', raizRouter);
 app.post('/raiz', raizRouter);
+
+app.get('/existe', existeRouter);
+app.post('/existe', existeRouter);
 
 app.listen(3000, () => {
   console.log('server started');
