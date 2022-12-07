@@ -52,25 +52,28 @@ routes.get('/', (req, res) => {
                 <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/bhaskara'> 
                 Bhaskara
                 </a></button>
-                
+
+                <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/progressao'> 
+                Progressão Aritmética
+                </a></button>
               </form>
+              
                <h2>Operações Geometricas<h2>
 
               <form>
                 <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/existe'> 
-                Verificação de Existência
+                Verificação de Existência de Triangulo
                 </a></button>
 
                 <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/tipo'> 
-                Verificação de Tipo
+                Verificação de Tipo de Triangulo
                 </a></button>
 
                 <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/pitagoras'> 
                 Pitagoras
                 </a></button>
-              </form>
-              
-              <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/circulo'> 
+                
+                <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/circulo'> 
                 Area e Comprimento do Circulo
                 </a></button>
               </form>

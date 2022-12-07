@@ -18,6 +18,8 @@ const bhaskaraRouter = require('./rotas3/bhaskara');
 const tipoRouter = require('./rotas3/tipo');
 const pitagorasRouter = require('./rotas3/pitagoras');
 const circuloRouter = require('./rotas3/circulo');
+const progressaoRouter = require('./rotas3/progressao');
+
 
 app.use(bodyParser.json());
 app.use(express.urlencoded());
@@ -61,6 +63,9 @@ app.post('/pitagoras', pitagorasRouter);
 
 app.get('/circulo', circuloRouter);
 app.post('/circulo', circuloRouter);
+
+app.get('/progressao', progressaoRouter);
+app.post('/progressao', progressaoRouter);
 
 app.listen(3000, () => {
   console.log('server started');
