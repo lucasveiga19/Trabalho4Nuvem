@@ -64,6 +64,10 @@ routes.get('/', (req, res) => {
                 <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/tipo'> 
                 Verificação de Tipo
                 </a></button>
+
+                <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/pitagoras'> 
+                Pitagoras
+                </a></button>
               </form>
 
             </body>
