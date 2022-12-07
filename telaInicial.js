@@ -54,7 +54,7 @@ routes.get('/', (req, res) => {
                 </a></button>
                 
               </form>
-               <h2>Operações com Triângulo<h2>
+               <h2>Operações Geometricas<h2>
 
               <form>
                 <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/existe'> 
@@ -67,6 +67,11 @@ routes.get('/', (req, res) => {
 
                 <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/pitagoras'> 
                 Pitagoras
+                </a></button>
+              </form>
+              
+              <button type="submit"><a href='https://Trabalho-4-nuvem.lucasveiga19.repl.co/circulo'> 
+                Area e Comprimento do Circulo
                 </a></button>
               </form>
 
