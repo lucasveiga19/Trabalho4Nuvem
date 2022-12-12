@@ -22,7 +22,7 @@ const progressaoRouter = require('./rotas3/progressao');
 const trianguloRouter = require('./rotas3/triangulo');
 
 app.use(bodyParser.json());
-app.use(express.urlencoded());
+//app.use(express.urlencoded());
 
 app.use('/', routes);
 app.get('/soma', somaRouter);
@@ -70,7 +70,7 @@ app.post('/progressao', progressaoRouter);
 app.get('/triangulo', trianguloRouter);
 app.post('/triangulo', trianguloRouter);
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
+//const port = process.env.PORT || 3000;
+app.listen(3000, () => {
   console.log('server started');
 });
