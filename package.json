@@ -7,8 +7,7 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node .",
-    "build": "[my-framework] build --output public",
+    "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
