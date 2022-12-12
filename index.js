@@ -22,7 +22,7 @@ const progressaoRouter = require('./rotas3/progressao');
 const trianguloRouter = require('./rotas3/triangulo');
 
 app.use(bodyParser.json());
-//app.use(express.urlencoded());
+app.use(express.urlencoded());
 
 app.use('/', routes);
 app.get('/soma', somaRouter);
