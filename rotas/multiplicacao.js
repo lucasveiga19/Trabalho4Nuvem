@@ -1,5 +1,6 @@
 const multiplicaoRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 multiplicaoRouter.get('/multiplicacao', (req, res) => {
   res.send(`
@@ -23,6 +24,9 @@ multiplicaoRouter.get('/multiplicacao', (req, res) => {
         </html> 
       `);
 });
+
+multiplicaoRouter.use(bodyParser.json());
+multiplicaoRouter.use(express.urlencoded());
 
 multiplicaoRouter.post('/multiplicacao', function (req, res) {
   var body = req.body;

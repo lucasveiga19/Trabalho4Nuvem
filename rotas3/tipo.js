@@ -1,5 +1,6 @@
 const tipoRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 tipoRouter.get('/tipo', (req, res) => {
   res.send(`
@@ -24,6 +25,9 @@ tipoRouter.get('/tipo', (req, res) => {
         </html> 
       `);
 });
+
+tipoRouter.use(bodyParser.json());
+tipoRouter.use(express.urlencoded());
 
 tipoRouter.post('/tipo', function (req, res) {
   var body = req.body;

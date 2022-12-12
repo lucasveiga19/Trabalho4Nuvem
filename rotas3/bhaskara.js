@@ -1,5 +1,6 @@
 const bhaskaraRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 bhaskaraRouter.get('/bhaskara', (req, res) => {
   res.send(`
@@ -24,6 +25,9 @@ bhaskaraRouter.get('/bhaskara', (req, res) => {
         </html> 
       `);
 });
+
+bhaskaraRouter.use(bodyParser.json());
+bhaskaraRouter.use(express.urlencoded());
 
 bhaskaraRouter.post('/bhaskara', function (req, res) {
   var body = req.body;

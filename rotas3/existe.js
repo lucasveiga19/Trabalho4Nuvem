@@ -1,5 +1,6 @@
 const existeRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 existeRouter.get('/existe', (req, res) => {
   res.send(`
@@ -25,6 +26,9 @@ existeRouter.get('/existe', (req, res) => {
         </html> 
       `);
 });
+
+existeRouter.use(bodyParser.json());
+existeRouter.use(express.urlencoded());
 
 existeRouter.post('/existe', function (req, res) {
   var body = req.body;

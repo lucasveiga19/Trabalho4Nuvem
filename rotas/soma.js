@@ -1,5 +1,6 @@
 const somaRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 somaRouter.get('/soma', (req, res) => {
   res.send(`
@@ -23,6 +24,9 @@ somaRouter.get('/soma', (req, res) => {
         </html> 
       `);
 });
+
+somaRouter.use(bodyParser.json());
+somaRouter.use(express.urlencoded());
 
 somaRouter.post('/soma', function (req, res) {
   var body = req.body;

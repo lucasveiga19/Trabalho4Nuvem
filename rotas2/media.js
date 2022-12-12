@@ -1,5 +1,6 @@
 const mediaRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 mediaRouter.get('/media', (req, res) => {
   res.send(`
@@ -23,6 +24,9 @@ mediaRouter.get('/media', (req, res) => {
         </html> 
       `);
 });
+
+mediaRouter.use(bodyParser.json());
+mediaRouter.use(express.urlencoded());
 
 mediaRouter.post('/media', function (req, res) {
   var body = req.body;

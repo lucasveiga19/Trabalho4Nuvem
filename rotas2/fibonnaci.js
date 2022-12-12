@@ -1,5 +1,6 @@
 const fibonnaciRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 fibonnaciRouter.get('/fibonnaci', (req, res) => {
   res.send(`
@@ -21,6 +22,9 @@ fibonnaciRouter.get('/fibonnaci', (req, res) => {
         </html> 
       `);
 });
+
+fibonnaciRouter.use(bodyParser.json());
+fibonnaciRouter.use(express.urlencoded());
 
 fibonnaciRouter.post('/fibonnaci', function (req, res) {
   var body = req.body;

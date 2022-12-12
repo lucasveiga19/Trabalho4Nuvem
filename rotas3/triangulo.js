@@ -1,5 +1,6 @@
 const trianguloRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 trianguloRouter.get('/triangulo', (req, res) => {
   res.send(`
@@ -26,6 +27,9 @@ trianguloRouter.get('/triangulo', (req, res) => {
         </html> 
       `);
 });
+
+trianguloRouter.use(bodyParser.json());
+trianguloRouter.use(express.urlencoded());
 
 trianguloRouter.post('/triangulo', function (req, res) {
   var body = req.body;

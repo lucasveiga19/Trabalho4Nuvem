@@ -1,5 +1,6 @@
 const raizRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 raizRouter.get('/raiz', (req, res) => {
   res.send(`
@@ -22,6 +23,9 @@ raizRouter.get('/raiz', (req, res) => {
         </html> 
       `);
 });
+
+raizRouter.use(bodyParser.json());
+raizRouter.use(express.urlencoded());
 
 raizRouter.post('/raiz', function (req, res) {
   var body = req.body;

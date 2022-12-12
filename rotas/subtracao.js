@@ -1,5 +1,6 @@
 const subtracaoRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 subtracaoRouter.get('/subtracao', (req, res) => {
   res.send(`
@@ -23,6 +24,9 @@ subtracaoRouter.get('/subtracao', (req, res) => {
         </html> 
       `);
 });
+
+subtracaoRouter.use(bodyParser.json());
+subtracaoRouter.use(express.urlencoded());
 
 subtracaoRouter.post('/subtracao', function (req, res) {
   var body = req.body;

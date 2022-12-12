@@ -1,5 +1,6 @@
 const pitagorasRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 pitagorasRouter.get('/pitagoras', (req, res) => {
   res.send(`
@@ -23,6 +24,9 @@ pitagorasRouter.get('/pitagoras', (req, res) => {
         </html> 
       `);
 });
+
+pitagorasRouter.use(bodyParser.json());
+pitagorasRouter.use(express.urlencoded());
 
 pitagorasRouter.post('/pitagoras', function (req, res) {
   var body = req.body;

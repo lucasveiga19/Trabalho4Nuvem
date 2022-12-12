@@ -1,5 +1,6 @@
 const divisaoRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 divisaoRouter.get('/divisao', (req, res) => {
   res.send(`
@@ -23,6 +24,9 @@ divisaoRouter.get('/divisao', (req, res) => {
         </html> 
       `);
 });
+
+divisaoRouter.use(bodyParser.json());
+divisaoRouter.use(express.urlencoded());
 
 divisaoRouter.post('/divisao', function (req, res) {
   var body = req.body;

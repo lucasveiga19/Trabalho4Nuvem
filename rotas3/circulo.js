@@ -1,5 +1,6 @@
 const circuloRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 circuloRouter.get('/circulo', (req, res) => {
   res.send(`
@@ -22,6 +23,9 @@ circuloRouter.get('/circulo', (req, res) => {
         </html> 
       `);
 });
+
+circuloRouter.use(bodyParser.json());
+circuloRouter.use(express.urlencoded());
 
 circuloRouter.post('/circulo', function (req, res) {
   var body = req.body;

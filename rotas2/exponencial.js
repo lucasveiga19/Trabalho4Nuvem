@@ -1,5 +1,6 @@
 const exponencialRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 exponencialRouter.get('/exponencial', (req, res) => {
   res.send(`
@@ -23,6 +24,9 @@ exponencialRouter.get('/exponencial', (req, res) => {
         </html> 
       `);
 });
+
+exponencialRouter.use(bodyParser.json());
+exponencialRouter.use(express.urlencoded());
 
 exponencialRouter.post('/exponencial', function (req, res) {
   var body = req.body;

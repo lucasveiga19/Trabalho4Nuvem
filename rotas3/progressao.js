@@ -1,5 +1,6 @@
 const progressaoRouter = require('express').Router();
 const bodyParser = require('body-parser');
+const express = require('express');
 
 progressaoRouter.get('/progressao', (req, res) => {
   res.send(`
@@ -26,6 +27,9 @@ progressaoRouter.get('/progressao', (req, res) => {
         </html> 
       `);
 });
+
+progressaoRouter.use(bodyParser.json());
+progressaoRouter.use(express.urlencoded());
 
 progressaoRouter.post('/progressao', function (req, res) {
   var body = req.body;
